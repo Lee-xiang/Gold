@@ -1,0 +1,589 @@
+@charset "UTF-8";
+/*** The reset ***/
+/** reset **/
+*, *::before, *::after {
+  box-sizing: border-box; }
+
+html, body, div, p, dl, dt, dd, figure, form, fieldset, button {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-family: sans-serif;
+  font-size: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  overflow-x: hidden;
+  font-size: .24rem; }
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal; }
+
+html, body {
+  height: 100%; }
+
+article,
+aside,
+footer,
+header,
+nav,
+main,
+section,
+summary,
+details,
+hgroup,
+figure,
+figcaption {
+  display: block; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+audio, canvas, video, progress {
+  display: inline-block;
+  vertical-align: baseline; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer; }
+
+a:active,
+a:hover {
+  outline: 0; }
+
+img {
+  border: none; }
+
+i, em, code {
+  font-style: normal; }
+
+b, strong {
+  font-weight: normal; }
+
+button, input, textarea, select {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  background: none;
+  -webkit-appearance: none; }
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus, button:active {
+  outline: none;
+  box-shadow: none; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  content: " ";
+  clear: both; }
+
+.clearfix {
+  zoom: 1; }
+
+/*** common ***/
+/** style common **/
+.hidden {
+  display: none; }
+
+body {
+  position: relative;
+  overflow-x: hidden; }
+
+img {
+  display: block;
+  width: 100%;
+  margin: 0 auto; }
+
+.main {
+  position: relative;
+  height: 100%;
+  transition: opacity ease-out .5s; }
+  .main.hide {
+    opacity: 0;
+    transition: opacity ease-out .5s; }
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 9.8rem;
+  max-height: 11.5rem;
+  max-width: 6.4rem;
+  margin: 0 auto;
+  background: url(../img/bg.jpg) no-repeat center;
+  background-size: cover;
+  overflow: hidden; }
+
+.cta {
+  display: block;
+  height: .5rem;
+  text-align: center;
+  margin: 0 auto; }
+  .cta img {
+    width: auto;
+    height: 100%;
+    margin: 0 auto; }
+
+.controls {
+  position: relative;
+  margin: .2rem 0; }
+  .controls .help-block {
+    height: .2rem;
+    margin-top: 0.08rem;
+    text-align: right;
+    color: red; }
+    .controls .help-block img {
+      float: right;
+      width: auto;
+      height: 100%; }
+
+.form-control {
+  width: 100%;
+  height: .7rem;
+  line-height:1;
+  padding:.23rem .1rem;
+  background: #fff;
+  border: 1px solid #dfdfdf;
+  border-radius: 0;
+  font-size: .24rem;
+  box-shadow: none; }
+
+.section {
+  height: 100%;
+  overflow: auto; }
+
+.show-tips {
+  position: absolute;
+  bottom: -0.5rem;
+  right: 0;
+  color: #fff;
+  font-size: .14rem; }
+
+/** music **/
+.music-btn {
+  position: absolute;
+  top: .15rem;
+  right: .15rem;
+  width: .45rem;
+  height: .45rem;
+  transform: rotate(0);
+  transition: transform .3s ease-out;
+  z-index: 99; }
+  .music-btn .music-icon {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: url(../img/music-icon.png) no-repeat 0 0;
+    background-size: auto 100%; }
+
+.music-audio {
+  position: relative;
+  opacity: 0;
+  z-index: -1; }
+
+.music-btn.on {
+  -webkit-animation: music 5s linear infinite;
+  -moz-animation: music 5s linear infinite;
+  -o-animation: music 5s linear infinite;
+  animation: music 5s linear infinite; }
+  .music-btn.on .music-icon {
+    background-position: right 0; }
+
+.music-btn img {
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+@-webkit-keyframes music {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+@keyframes music {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+@-moz-keyframes music {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+@-o-keyframes music {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+/** 查看攻略按钮 **/
+.tactic-btn {
+  position: absolute;
+  bottom: .32rem;
+  right: .56rem;
+  width: 1.49rem;
+  height: .29rem;
+  z-index: 101; }
+
+/*** pages ***/
+/** section **/
+.section .section-wrap {
+  position: absolute;
+  top: 1.65rem;
+  left: .5rem;
+  width: 5.4rem;
+  z-index: 2; }
+
+.section .logo {
+  width: 1.77rem;
+  height: .5rem;
+  margin: 0 auto .4rem auto; }
+
+.section img {
+  height: 100%;
+  width: auto; }
+
+.pages {
+  opacity: 1;
+  visibility: visible;
+  transition: all ease-out .5s; }
+  .pages.hide {
+    opacity: 0;
+    visibility: hidden;
+    transition: all ease-out .5s; }
+
+.pages-tips {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 20;
+  transition: all ease-out .5s; }
+  .pages-tips.show {
+    opacity: 1;
+    visibility: visible;
+    transition: all ease-out .5s; }
+
+/** 首页 **/
+.section-1 {
+  background: url(../img/page1/bg.jpg) no-repeat center;
+  background-size: cover; }
+  .section-1 .index-wrap {
+    top: 1.65rem; }
+  .section-1 .logo {
+    margin-bottom: .65rem; }
+  .section-1 .slogan {
+    height: .9rem;
+    margin-bottom: .4rem; }
+  .section-1 .text-1 {
+    width: 5rem;
+    height: 1.8rem;
+    margin: 0 auto .5rem auto; }
+  .section-1 .text-2 {
+    height: .56rem;
+    margin-bottom: .45rem; }
+  .section-1 .join-cta {
+    width: 2.94rem;
+    height: 0.66rem;
+    margin: 0 auto; }
+  .section-1 .join-end {
+    height: 1.1rem;
+    margin-top: .78rem; }
+
+/** 活动报名 **/
+.section-2 .join-form-wrap {
+  top: 1.47rem;
+  left: .94rem;
+  width: 4.52rem; }
+
+.section-2 .logo {
+  height: .4rem;
+  margin-bottom: .66rem; }
+
+.section-2 .title {
+  height: .34rem;
+  margin-bottom: .66rem; }
+
+.section-2 .form-title {
+  height: .22rem; }
+  .section-2 .form-title img {
+    margin-left: 0; }
+
+.section-2 .controls .form-control {
+  padding-left: .8rem; }
+
+.section-2 .controls .control-label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: .67rem;
+  height: .7rem;
+  background: url(../img/page2/label.png) no-repeat 0 0;
+  background-size: auto 100%; }
+
+.section-2 .controls .label-phone {
+  background-position: right 0; }
+
+.section-2 .cta {
+  width: 2.49rem;
+  height: .55rem; }
+
+.section-2 .join-confirm-cta {
+  margin-top: .74rem; }
+
+.section-2 .back-cta {
+  height: .55rem;
+  margin-top: .48rem; }
+
+/** 首页 **/
+.section-3 .join-success-wrap {
+  left: 1.16rem;
+  width: 4.1rem; }
+
+.section-3 .logo {
+  margin-bottom: .65rem; }
+
+.section-3 .slogan {
+  height: .9rem;
+  margin-bottom: .4rem; }
+
+.section-3 .success-content {
+  width: 4rem;
+  margin: 0 auto .66rem auto;
+  padding: .37rem 0 .47rem .77rem;
+  background: url(../img/page3/content-bg.png) no-repeat 0 0;
+  background-size: 100%;
+  font-size: .26rem;
+  line-height: 1.65;
+  letter-spacing: .045rem;
+  color: #A58546; }
+  .section-3 .success-content .name {
+    font-size: .3rem; }
+
+.section-3 .date {
+  height: .53rem;
+  margin-bottom: .5rem; }
+
+.section-3 .cta {
+  float: left;
+  width: 1.8rem; }
+
+.section-3 .invite-cta {
+  margin-right: .5rem; }
+
+.section-3 .down-text1 {
+  height: .16rem;
+  margin: .38rem 0 0 -0.38rem; }
+
+/** 活动报名 **/
+.section-4 .prize-form-wrap {
+  top: 1.47rem; }
+
+.section-4 .logo {
+  height: .4rem; }
+
+.section-4 .title {
+  height: .34rem;
+  margin-bottom: .38rem; }
+
+.section-4 .img {
+  height: 2.45rem;
+  margin-bottom: .3rem;
+  margin-left: -0.02rem; }
+  .section-4 .img img {
+    margin-left: 0; }
+
+.section-4 .form-group, .section-4 .cta-wrap {
+  width: 4.32rem;
+  margin: 0 auto; }
+
+.section-4 .controls .form-control {
+  text-align: center; }
+
+.section-4 .cta {
+  float: left;
+  width: 1.98rem;
+  margin-top: .24rem; }
+
+.section-4 .back-cta {
+  margin-left: .36rem; }
+
+.section-4 .text {
+  height: .66rem;
+  margin-top: .7rem; }
+
+/** 首页 **/
+.section-5 .code-share-wrap, .section-6 .code-share-wrap {
+  position: absolute;
+  top: 1.47rem;
+  text-align: center; }
+
+.section-5 .logo, .section-6 .logo {
+  margin-bottom: 1.06rem; }
+
+.section-5 .title, .section-6 .title {
+  height: .36rem;
+  margin-bottom: .30rem; }
+
+.section-5 .code-img, .section-6 .code-img {
+  height: 2.97rem;
+  margin-bottom: .25rem; }
+
+.section-5 .detail, .section-6 .detail {
+  height: .87rem; }
+
+/** pop **/
+/** pop **/
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 105;
+  background: rgba(0, 0, 0, 0.4);
+  visibility: hidden; }
+  .modal .modal-inner {
+    position: absolute;
+    top: 50%;
+    left: .8rem;
+    width: 4.8rem;
+    opacity: 0;
+    z-index: 101;
+    transform: translateY(-30%);
+    transition: all ease-out .5s; }
+  .modal .close {
+    position: absolute;
+    bottom: .6rem;
+    top: .2rem;
+    right: .2rem;
+    width: .2rem;
+    height: .2rem; }
+
+.modal-tactic .modal-inner {
+  left: .5rem;
+  width: 5.4rem;
+  height: 8.35rem;
+  background: #fff; }
+
+.modal-tactic .top {
+  height: 1.18rem;
+  padding: .68rem 0 .2rem 0; }
+
+.modal-tactic .content {
+  height: calc(100% - 1.18rem);
+  padding: 0 .3rem .5rem .3rem;
+  -webkit-overflow-scrolling:touch;
+  overflow: auto; }
+
+.modal-tactic .title img, .modal-tactic .text img {
+  width: auto;
+  height: 100%;
+  margin: 0 auto;
+  z-index: 0; }
+
+.modal-tactic .title {
+  height: .28rem; }
+
+.modal-tactic .text {
+  position: relative;
+  height: .65rem;
+  margin-top: .5rem; }
+  .modal-tactic .text::before {
+    position: absolute;
+    top: -0.35rem;
+    left: 2.15rem;
+    content: " ";
+    width: .5rem;
+    height: 1px;
+    background: #A98841; }
+
+.modal-tactic .imgs {
+  margin-bottom: .82rem; }
+  .modal-tactic .imgs img {
+    margin-top: .8rem; }
+
+.modal-join .modal-inner {
+  height: 3.54rem; }
+
+.modal-join .signup-wrap {
+  position: absolute;
+  bottom: .6rem;
+  left: 0;
+  width: 100%; }
+
+.modal-join .signup-cta {
+  margin: 0 auto;
+  width: 2.94rem;
+  height: .66rem; }
+
+.modal-crm .modal-inner {
+  height: 3.8rem; }
+
+.modal-crm .content {
+  position: absolute;
+  top: .72rem;
+  left: 0;
+  width: 100%;
+  height: 3rem;
+  padding: .2rem 0;
+  text-align: center; }
+
+.modal-crm .text-tips {
+  line-height: 1.65;
+  margin-bottom: .43rem; }
+  .modal-crm .text-tips .title {
+    font-size: .24rem; }
+  .modal-crm .text-tips .theme {
+    font-size: .22rem; }
+
+.modal-crm .cancel-cta {
+  width: 2.8rem;
+  height: .60rem;
+  margin-bottom: .23rem; }
+
+.modal-share {
+  background: rgba(0, 0, 0, 0.6); }
+  .modal-share .sharetips-wrap {
+    position: absolute;
+    top: .25rem;
+    right: .2rem;
+    width: 3.5rem;
+    height: 1.62rem; }
+  .modal-share .close-white {
+    position: absolute;
+    bottom: 2.22rem;
+    left: 2.95rem;
+    width: .5rem;
+    height: .51rem;
+    transform: rotate(0);
+    transition: transform ease-out .5s; }
+
+.modal-show {
+  visibility: visible; }
+  .modal-show .modal-inner {
+    opacity: 1;
+    transform: translateY(-50%);
+    transition: all ease-out .5s; }
+  .modal-show.modal-share .close {
+    transform: rotate(180deg);
+    transition: transform ease-out .5s; }
