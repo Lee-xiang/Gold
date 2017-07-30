@@ -10,12 +10,12 @@ export default {
 				{
 					area:'CQ',
 					start:"2017/06/19",
-					active:"2017/07/03",
-					over:"2017/07/10"
+					active:"2017/08/05",
+					over:"2017/08/05"
 				},
 				{
 					area:'SH',
-					start:"2017/07/26",
+					start:"2017/08/05",
 					active:"2017/08/23",
 					over:"2017/08/30"
 				}
