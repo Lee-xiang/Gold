@@ -11,19 +11,19 @@ export default {
 			area:'CQ',
 			start:"2017/06/23",
 			active:"2017/07/03",
-			over:"2017/08/26"
+			over:"2017/07/26"
 		},
 		{
 			area:'SH',
-			start:"2017/08/26",
-			active:"2017/09/23",
+			start:"2017/08/10",
+			active:"2017/08/20",
 			over:"2017/09/30"
 		}
 	],
 	CODE: {
 		'BJ': 'A11',
 		'CQ': '990',
-		'SH': 'C11'
+		'SH': '266'
 	},
 	STATUS:{
 		SIGN:0,
