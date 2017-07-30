@@ -23,7 +23,7 @@ export default {
 	CODE: {
 		'BJ': 'A11',
 		'CQ': '990',
-		'SH': '266'
+		'SH': '276'
 	},
 	STATUS:{
 		SIGN:0,
